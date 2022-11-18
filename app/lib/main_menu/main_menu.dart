@@ -186,7 +186,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
           height: 1.0,
           color: const Color.fromRGBO(151, 151, 151, 0.29),
         ))
-        ..add(FlatButton(
+        ..add(TextButton(
             onPressed: () {
               _pauseSection();
               Navigator.of(context)
@@ -194,7 +194,6 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                       builder: (BuildContext context) => FavoritesPage()))
                   .then(_restoreSection);
             },
-            color: Colors.transparent,
             child:
                 Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
               Container(
@@ -212,12 +211,11 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                     color: Colors.black.withOpacity(0.65)),
               )
             ])))
-        ..add(FlatButton(
+        ..add(TextButton(
             onPressed: () => Share.share("Check out The History of Everything! " +
                 (Platform.isAndroid
                     ? "https://play.google.com/store/apps/details?id=com.twodimensions.timeline"
                     : "itms://itunes.apple.com/us/app/apple-store/id1441257460?mt=8")),
-            color: Colors.transparent,
             child:
                 Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
               Container(
@@ -237,7 +235,7 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
             ])))
         ..add(Padding(
           padding: const EdgeInsets.only(bottom: 30.0),
-          child: FlatButton(
+          child: TextButton(
               onPressed: () {
                 _pauseSection();
                 Navigator.of(context)
@@ -245,7 +243,6 @@ class _MainMenuWidgetState extends State<MainMenuWidget> {
                         builder: (BuildContext context) => AboutPage()))
                     .then(_restoreSection);
               },
-              color: Colors.transparent,
               child:
                   Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
                 Container(
